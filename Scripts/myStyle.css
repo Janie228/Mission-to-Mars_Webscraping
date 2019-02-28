@@ -1,0 +1,139 @@
+* {
+    /* box-sizing: border-box; */
+    font-family: Georgia, Arial, Helvetica;
+  }
+  
+body {
+  background-color: white  /*e8eaf6 */ ;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 1px;
+  font-family: Georgia, Arial, Helvetica;
+  font-size: 1rem ;
+}  
+
+/* header {
+  float: left;
+} */
+  /* Style the content */
+main {
+  float: left;
+  /* clear: both; */
+  /* position: relative; */
+  background-color: white /* #e8eaf6 */;
+  min-height: 100%;
+  padding: 2rem;
+  /* margin: 10px; */
+}
+
+
+/* Menu Text */
+.navbar-nav a {
+  font-weight: bold;
+  font-size: 1em ;
+}
+
+nav {
+  box-shadow: 1px 1px 5px #311b92;
+}
+
+.content-box {
+  padding: 2.25rem ;
+  box-shadow: 1px 1px 5px #bdbdbd;
+  margin-top: .1em; /* Space between pages */
+}
+
+  
+/* Style the footer */
+footer {
+  height: 2.5rem;
+  background-color: #b388ff;
+  box-shadow: 1px 1px 1px #311b92;
+}
+
+.footer-box {
+  padding-top: 10px;
+  text-align: center;
+  font-size: .75rem ;
+}
+
+hr {
+  color: gray;
+}
+
+ /*Header & Footer: Gradient Colors */
+ .bg-grad_blue {
+  /*background-color: rgba(0,0,255);  For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgba(255,0,255, .1), rgba(0,0,255, .9)); /* Standard syntax (must be last) */
+}
+
+.bg-grad_fuschia {
+ /*  background-color:  rgba(0,0,255); For browsers that do not support gradients */
+  background-image: linear-gradient(rgba(255,0,255, .1), rgba(0,0,255)); /* Standard syntax (must be last) */
+}
+
+ /* Button colors */
+.bt-purple:not(:disabled):not(.disabled).active, .bt-purple:hover, .btn-purple:not(:disabled):not(.disabled):active, .bt-purple:hover, .show>.btn-purple.dropdown-toggle {
+  color: #fff;
+  background-color: #aa00ff;
+  border-bottom: 1px solid  #673ab7; 
+  text-align: center;
+}
+
+.bt-purple:hover {
+  box-shadow: 0 1px 20px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.bt-purple {
+  color: #fff;
+  background-color: #7e57c2;
+  border-bottom: 1px solid #673ab7;
+  text-align: center;
+  }
+  
+.dropdown:hover .dropdown-menu {
+  display: block;
+  background-color: #e5e5f5;
+}
+
+
+/** Image Links **/
+.border {
+  display: inline-block;
+  position: relative;
+}
+.border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset 0  white;
+  transition: box-shadow .1s ease;
+}
+.border:hover::after, border:hover {
+  box-shadow: inset 0 0 0 1px #aa00ff;
+}
+
+img {
+  display: fluid;
+  position: relative; 
+}
+
+.img-center {
+	vertical-align: middle;
+  text-align: center;
+} 
+
+/* // Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
