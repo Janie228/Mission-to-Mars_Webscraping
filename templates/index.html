@@ -2,117 +2,131 @@
 <html lang="en">
 
 <head>
-    <title>Janie's Website</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Janie's Mission to Mars</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/Scripts/myStyle.css">
-    <link rel="stylesheet" type="text/css" href="/Scripts/table-style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <!-- <script src="/Scripts/myJQuery.js"></script> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/star.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/marStyle.css') }}">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-grad_blue fixed-top">
-            <a class="navbar-brand" href="#">
-                <img src="/Images/data_scientist_Profile.png" class="rounded" alt="Home" width="40" height="40">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navID"
-                aria-controls="navID" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="container-fluid">
 
-            <!-- Nav tabs -->
-            <div class="collapse navbar-collapse" id="navID">
-                <ul class="navbar-nav nav-pills mr-auto">
-                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
-                        <a class="nav-link bt-purple active" title="Scrape new data!" href="/scrape">Scrape</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- Navigation End-->
+        <a class="navbar-brand float-left" href="#">
+            <img src="{{ url_for('static', filename='img/data_scientist_Profile.png') }}" class="rounded" alt="Home"
+                width="40" height="40">
+        </a>
 
-    <!--Content Start-->
-    <main id="contentID" class="container-fluid">
-        <!-- <div class="container-fluid"> -->
-            <div class="row content-box">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 jumbotron text-center">
-                    <h1 class="font-weight-bold">Mission to Mars</h1>
-                </div>
-            </div>
-            <div class="row  content-box">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h3 class="font-weight-bold">Latest Mars News</h3>
-                    <h5>NASA's </h5>
-                    <p>Preparatiion</p>
-                </div>
-            </div>
+        <div class="jumbotron text-center">
+<!-- font-weight-bold -->
+
+            <h1 id="title" class=" glow"><span>Mission to Mars</span></h1>
+            <a class="btn btn-primary btn-lg" href="/scrape" title="Click here to display current news."
+                role="button">Display</a>
+        </div>
+
+        <div class="main">
+
             <div class="row">
                 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 ">
-                    <h4 class="font-weight-bold">Featured Mars Image</h4>
-                    <img src="Images/city_temp.png" class="float-left img-fluid" alt="temperature">
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 bg-white content-box">
-                    testt
-                </div>
-        
-            </div>
-            <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bg-white content-box">
-                        <h4 class="font-weight-bold  text-center">Mars Hemispheres</h4>
-                        <hr />
-
-                            <div class="col-sm-3 col-md-6">
-                                <a href="" title="Temperature Visualization">
-                                    <div class="border">
-                                        <img src="Images/city_temp.png" class="img-fluid mx-auto d-block" alt="temperature image">
-                                    </div>
-                                </a>
-                            </div><br />
-                            <div class="col-sm-3 col-md-6">
-                                <a href="" title="Humidity Visualization">
-                                    <div class="border">
-                                        <img src="Images/city_humidity.png" class="img-fluid mx-auto d-block" alt="humidity image">
-                                    </div>
-                                </a><br />
-                            </div>
-                            <div class="col-sm-3 col-md-6">
-                                <a href="" title="Cloudiness Visualization">
-                                    <div class="border">
-                                        <img src="Images/city_cloudiness.png" class="img-fluid mx-auto d-block"
-                                            alt="cloudiness image">
-                                    </div>
-                                </a><br />
-                            </div>
-                            <div class="col-sm-3 col-md-6">
-                                <a href="" title="Wind Speed Visualization">
-                                    <div class="border">
-                                        <img src="Images/city_wind.png" class="img-fluid mx-auto d-block" alt="wind speed image">
-                                    </div>
-                                </a><br />
-                            </div>
-
+                    <div class="card border-dark mb-3 text-primary">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">Content</div>
+                        <div class="card-footer">Footer</div>
                     </div>
-            
-                </div>       
-        <!-- </div> -->
+                    <div class="card mb-3 text-white bg-primary">
+                        <div class="card-body">
+                            <h3 class="card-title">Latest Mars News</h3>
+                            <h4 class="card-subtitle mb-2 text-muted">{{ mars.newsTitle }}</h4>
+                            <p class="card-text"> {{ mars.newsDesc }}</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light mb-3 text-primary">
+                        <div class="card-body">
+                            <h3 class="card-title">Featured Mars Image</h3>
+                            <img src="{{ mars.img_featuredUrl }}" class="float-left img-fluid" alt="Featured Image">
+                            <p class="card-text"> {{ mars.img_featuredTitle }}</p>
+                            <p>  {{ mars.img_releaseDate  }}</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark bg-light mb-3 text-primary">
+                        <div class="card-header">
+                            <h3>Dark card title</h3>
+                        </div>
+                        <div class="card-body text-dark">
 
-           
-    </main>
-    <!-- Content End -->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the
+                                card's
+                                content.</p>
+                        </div>
+                    </div>
 
-    <!-- Footer start -->
-    <footer>
-        <div class="fixed-bottom bg-grad_fuschia text-center footer-box">
-            <p class="text-white"><i>Copyright © Janie Wallace 2019</i></p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="card border-dark mb-3">
+                        <div class="card-header">
+                            <h3>Current Weather on Mars</h3>
+                        </div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">{{ mars.marsWeather }}</p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mb-3">
+                        <div class="card-header">
+                            <h3>Mars Facts</h3>
+                        </div>
+                        <div class="card-body text-dark">
+                            <table class="table-bordered table-responsive-sm table-responsive-lg">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in mars.marsFacts %}
+                                    <tr>
+                                        <td>{{ row }}</td>
+                                        <td>{{ mars.marsFacts[row] }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card border-dark mb-3">
+                <div class="card-header">
+                    <h3 class="font-weight-bold">Mars Hemispheres</h3>
+
+                </div>
+                <div class="card-body text-dark">
+                    {% for row in mars.marsHemisphere %}
+                    <div> 
+                        <img src="{{ row['img_url'] }}" class="float-left img-fluid" alt="Featured Image">
+                        <p>{{ row['img_title'] }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
         </div>
-    </footer>
-    <!-- Footer end -->
+    </div>
+
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
 </body>
 
 </html>
