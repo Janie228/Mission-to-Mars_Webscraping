@@ -1,0 +1,141 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1rem;
+  overflow: scroll; /* hidden;*/
+  }
+
+*, *:before, *:after { 
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; 
+ }
+
+body {
+  background-color: black ;
+  background-image: url("/static/img/PIA07137_hires.jpg");
+  /* Chrome, Safari, Opera */
+  -webkit-animation: img_loop 25s linear 5s infinite alternate;  
+  animation: img_loop 25s linear 5s infinite alternate;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 1px;
+  font-family: Georgia, Arial, Helvetica;
+  /* font-size: 1rem; */
+}  
+  
+/* Chrome, Safari, Opera */
+@-webkit-keyframes img_loop {
+  0% {background-image: url("/static/img/PIA07137_hires.jpg");}
+  25% {background-image: url("/static/img/PIA16605_hires.jpg");}
+  50% {background-image: url("/static/img/PIA17564_hires.jpg");}
+  100% {background-image: url("/static/img/PIA09320_hires.jpg");}
+}
+
+/* Standard syntax */
+@keyframes img_loop {
+  0% {background-image: url("/static/img/PIA07137_hires.jpg");}
+  25% {background-image: url("/static/img/PIA16605_hires.jpg");}
+  50% {background-image: url("/static/img/PIA17564_hires.jpg");}
+  100% {background-image: url("/static/img/PIA09320_hires.jpg");}
+}
+
+.main {
+  /* float: left;
+  /* clear: both; */
+  /* position: relative; */
+  /* background-color: white 
+min-height: 100%;  */
+  padding: 0rem 2.1rem 2.1rem 2.1rem;
+  /* margin: 10px; */
+}
+
+.card {
+  opacity: .4;
+}
+
+.jumbotron {
+  /* background-image: linear-gradient(rgba(8, 5, 133, 0.87), rgb(0, 0, 7));  */
+  background: transparent;
+}
+
+  /* Button colors */
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:hover, .btn-navy:not(:disabled):not(.disabled):active, .btn-primary:hover, .show>.btn-navy.dropdown-toggle {
+    color: #fff;
+    background-color: navy;
+    border-bottom: 1px solid  #673ab7; 
+    text-align: center;
+  }
+
+.btn-primary:hover {
+  box-shadow: 0 1px 20px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #7e57c2;
+  border-bottom: 1px solid #673ab7;
+  text-align: center;
+  }
+
+/* .card {
+    opacity: .1;
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    html {
+        font-size: .8rem;
+      }
+}
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    html {
+        font-size: .9rem;
+      } 
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    html {
+        font-size: 1rem;
+      }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    html {
+        font-size: 1rem;
+      }
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 5s ease-in-out infinite alternate;
+  -moz-animation: glow 5s ease-in-out infinite alternate;
+  animation: glow 5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
