@@ -19,72 +19,60 @@
 
 <body>
     <div class="container-fluid">
-
-        <a class="navbar-brand float-left" href="#">
-            <img src="{{ url_for('static', filename='img/data_scientist_Profile.png') }}" class="rounded" alt="Home"
-                width="40" height="40">
-        </a>
-
-        <div class="jumbotron text-center">
-<!-- font-weight-bold -->
-
-            <h1 id="title" class=" glow"><span>Mission to Mars</span></h1>
-            <a class="btn btn-primary btn-lg" href="/scrape" title="Click here to display current news."
-                role="button">Display</a>
+        <!-- Header start -->
+        <div class="fixed-top">
+            <a class="navbar-brand float-left p-3" href="#">
+                <img src="{{ url_for('static', filename='img/data_scientist_Profile.png') }}" class="rounded" alt="Home"
+                    width="40" height="40">
+            </a>
+            <div class="jumbotron text-center">
+                <h1 id="title" class="glow"><span>Mission to Mars</span></h1>
+                <a class="btn btn-primary btn-md" href="/scrape" title="Click here to get the latest news."
+                    role="button">Latest News
+                    Update</a>
+            </div>
         </div>
+        <!-- Header end -->
 
-        <div class="main">
-
+        <!-- Content start -->
+        <div class="sticky-offset">
             <div class="row">
                 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 ">
-                    <div class="card border-dark mb-3 text-primary">
-                        <div class="card-header">Header</div>
-                        <div class="card-body">Content</div>
-                        <div class="card-footer">Footer</div>
-                    </div>
                     <div class="card mb-3 text-white bg-primary">
+                        <div class="card-header">
+                            <h3 class="font-weight-bold">Latest Mars News</h3>
+                        </div>
                         <div class="card-body">
-                            <h3 class="card-title">Latest Mars News</h3>
-                            <h4 class="card-subtitle mb-2 text-muted">{{ mars.newsTitle }}</h4>
+                            <h4 class="card-subtitle">{{ mars.newsTitle }}</h4>
                             <p class="card-text"> {{ mars.newsDesc }}</p>
                         </div>
                     </div>
                     <div class="card bg-light mb-3 text-primary">
                         <div class="card-body">
                             <h3 class="card-title">Featured Mars Image</h3>
-                            <img src="{{ mars.img_featuredUrl }}" class="float-left img-fluid" alt="Featured Image">
-                            <p class="card-text"> {{ mars.img_featuredTitle }}</p>
-                            <p>  {{ mars.img_releaseDate  }}</p>
+                            <figure class="figure">
+                                <img src="{{ mars.img_featuredUrl }}" class="figure-img img-fluid rounded"
+                                    alt="Featured Image">
+                                <figcaption class="figure-caption text-primary"> {{ mars.img_featuredTitle }} - Date
+                                    Release: {{ mars.img_releaseDate  }}</figcaption>
+                            </figure>
                         </div>
                     </div>
-                    <div class="card border-dark bg-light mb-3 text-primary">
-                        <div class="card-header">
-                            <h3>Dark card title</h3>
-                        </div>
-                        <div class="card-body text-dark">
-
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the
-                                card's
-                                content.</p>
-                        </div>
-                    </div>
-
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <div class="card border-dark mb-3">
-                        <div class="card-header">
+                    <div class="card border-dark mb-3 text-dark">
+                        <div class="card-header text-center">
                             <h3>Current Weather on Mars</h3>
                         </div>
-                        <div class="card-body text-dark">
+                        <div class="card-body">
                             <p class="card-text">{{ mars.marsWeather }}</p>
                         </div>
                     </div>
-                    <div class="card border-dark mb-3">
-                        <div class="card-header">
+                    <div class="card border-dark mb-3 text-dark">
+                        <div class="card-header text-center">
                             <h3>Mars Facts</h3>
                         </div>
-                        <div class="card-body text-dark">
+                        <div class="card-body">
                             <table class="table-bordered table-responsive-sm table-responsive-lg">
                                 <thead>
                                     <tr>
@@ -101,32 +89,50 @@
                                     {% endfor %}
                                 </tbody>
                             </table>
-                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
-            <div class="card border-dark mb-3">
-                <div class="card-header">
-                    <h3 class="font-weight-bold">Mars Hemispheres</h3>
 
-                </div>
-                <div class="card-body text-dark">
-                    {% for row in mars.marsHemisphere %}
-                    <div> 
-                        <img src="{{ row['img_url'] }}" class="float-left img-fluid" alt="Featured Image">
-                        <p>{{ row['img_title'] }}</p>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="card bg-light text-primary">
+                        <div class="card-header text-center">
+                            <h3 class="font-weight-bold">Mars Hemispheres</h3>
+                        </div>
+                        <div class="row card-body">
+                            {% for row in mars.marsHemisphere %}
+                            <div class="mb-3 d-block col-xs-3 col-sm-3 col-md-6 col-lg-6">
+                                <figure>
+                                    <img src="{{ row['img_url'] }}" class="figure-img img-fluid rounded w-100 h-100"
+                                        alt="{{ row['img_title'] }}">
+                                    <figcaption class="card-text text-center">{{ row['img_title'] }}</figcaption>
+                                </figure>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
 
         </div>
+        <!-- Content end -->
     </div>
 
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
+    <!-- Footer start -->
+    <footer>
+        <div class="fixed-bottom text-center text-primary">
+            <p><strong><i>Copyright © Janie Wallace 2019</i></strong></p>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Animated stars begin -->
+    <div id='stars' />
+    <div id='stars2' />
+    <div id='stars3' />
+    <!-- Animated stars end -->
 </body>
 
 </html>
