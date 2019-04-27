@@ -1,0 +1,1 @@
+web: gunicorn mars_mission.app:app
