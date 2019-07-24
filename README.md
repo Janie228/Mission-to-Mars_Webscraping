@@ -98,8 +98,15 @@ To submit your work to BootCampSpot, create a new GitHub repository and upload t
 * Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
 * Use Bootstrap to structure your HTML template.
 
+-----
+
 ## Results
-* The link to this project's website is at the project title above.
+* [Click here to website](https://jl-mission-to-mars.herokuapp.com/)
+![Janie_Mars_Website5.JPG](Images/Janie_Mars_Website5.JPG)
+
+
+## :warning: Important Notes
+* The 'Latest News Update' button doesn't work on the website, but it'll work if you host it locally on your computer.
 
 
 -----
