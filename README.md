@@ -1,4 +1,4 @@
-# [Mission to Mars](https://jl-mission-to-mars.herokuapp.com/)
+# [Mission to Mars Webscraping](https://jl-mission-to-mars.herokuapp.com/)
 -----
 
 ![mission_to_mars](Images/spl_mission_to_mars.jpg)
