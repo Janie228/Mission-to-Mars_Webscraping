@@ -3,7 +3,7 @@
 
 ![mission_to_mars](Images/spl_mission_to_mars.jpg)
 
-In this assignment, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
+In this project, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
 
 ## Step 1 - Scraping
 
@@ -97,6 +97,10 @@ To submit your work to BootCampSpot, create a new GitHub repository and upload t
 * Use Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
 * Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
 * Use Bootstrap to structure your HTML template.
+
+## Results
+* The link to this project's website is at the project title above.
+
 
 -----
 ### Copyright
