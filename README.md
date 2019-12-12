@@ -4,7 +4,13 @@
 ![mission_to_mars](Images/spl_mission_to_mars.jpg)
 
 In this project, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
+-----
 
+## Results
+* [Click here to website](https://jl-mission-to-mars.herokuapp.com/)
+![Janie_Mars_Website5.JPG](Images/Janie_Mars_Website5.JPG)
+
+-----
 ## Step 1 - Scraping
 
 Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
@@ -99,10 +105,6 @@ To submit your work to BootCampSpot, create a new GitHub repository and upload t
 * Use Bootstrap to structure your HTML template.
 
 -----
-
-## Results
-* [Click here to website](https://jl-mission-to-mars.herokuapp.com/)
-![Janie_Mars_Website5.JPG](Images/Janie_Mars_Website5.JPG)
 
 
 ## :warning: Important Notes
