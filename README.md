@@ -4,6 +4,7 @@
 ![mission_to_mars](Images/spl_mission_to_mars.jpg)
 
 In this project, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
+
 -----
 
 ## Results
