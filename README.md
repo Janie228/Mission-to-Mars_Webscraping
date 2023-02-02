@@ -6,12 +6,6 @@
 In this project, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
 
 -----
-
-## Results
-* [Click here to website](https://jl-mission-to-mars.herokuapp.com/)
-![Janie_Mars_Website5.JPG](Images/Janie_Mars_Website5.JPG)
-
------
 ## Step 1 - Scraping
 
 Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
